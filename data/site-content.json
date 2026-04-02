@@ -57,6 +57,10 @@
   },
   "hero": {
     "profileImage": "/asset/images/profile.png",
+    "backgroundVideo": {
+      "url": "https://videos.pexels.com/video-files/32399073/13820342_2560_1440_30fps.mp4",
+      "overlayOpacity": 0.68
+    },
     "cvUrl": "/asset/pdf/cv.pdf",
     "socialLinks": {
       "github": "https://github.com/OussamaBentaouil70",

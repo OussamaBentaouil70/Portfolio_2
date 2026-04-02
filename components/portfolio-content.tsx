@@ -21,7 +21,30 @@ export default function PortfolioContent() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 relative overflow-hidden isolate">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <video
+            className="h-full w-full object-cover"
+            src={hero.backgroundVideo.url}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 bg-slate-950"
+            style={{ opacity: hero.backgroundVideo.overlayOpacity }}
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(59,130,246,0.32),transparent_42%),radial-gradient(circle_at_80%_0%,rgba(37,99,235,0.24),transparent_35%)]" />
+          <motion.div
+            animate={{ opacity: [0.15, 0.28, 0.15], scale: [1, 1.08, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute -top-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-500/30 blur-3xl"
+          />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
