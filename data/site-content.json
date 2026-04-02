@@ -1,0 +1,252 @@
+{
+  "translations": {
+    "en": {
+      "nav_about": "About",
+      "nav_experience": "Experience",
+      "nav_projects": "Projects",
+      "nav_testimonials": "Testimonials",
+      "nav_contact": "Contact",
+      "hero_title": "Hi, I'm Oussama Bentaouil",
+      "hero_subtitle": "Full Stack Web Developer",
+      "hero_description": "Building intuitive applications with robust backend functionality and modern frontend experiences.",
+      "hero_cv_button": "View CV",
+      "about_title": "About Me",
+      "experience_title": "Experience",
+      "projects_title": "Featured Projects",
+      "contact_title": "Get In Touch",
+      "contact_name": "Name",
+      "contact_email": "Email",
+      "contact_message": "Message",
+      "contact_send": "Send Message",
+      "contact_sending": "Sending...",
+      "contact_success": "Message sent successfully!",
+      "contact_error": "Failed to send message. Please try again.",
+      "footer_rights": "All rights reserved.",
+      "skills_title": "Skills & Expertise",
+      "edu_title": "Education",
+      "testimonials_title": "Testimonials",
+      "testimonials_subtitle": "What people say about my work"
+    },
+    "fr": {
+      "nav_about": "À propos",
+      "nav_experience": "Expérience",
+      "nav_projects": "Projets",
+      "nav_testimonials": "Témoignages",
+      "nav_contact": "Contact",
+      "hero_title": "Salut, je suis Oussama Bentaouil",
+      "hero_subtitle": "Développeur Web Full Stack",
+      "hero_description": "Création d'applications intuitives avec des fonctionnalités backend robustes et des expériences frontend modernes.",
+      "hero_cv_button": "Voir le CV",
+      "about_title": "À propos de moi",
+      "experience_title": "Expérience",
+      "projects_title": "Projets en vedette",
+      "contact_title": "Contactez-moi",
+      "contact_name": "Nom",
+      "contact_email": "Email",
+      "contact_message": "Message",
+      "contact_send": "Envoyer le message",
+      "contact_sending": "Envoi en cours...",
+      "contact_success": "Message envoyé avec succès !",
+      "contact_error": "Échec de l'envoi du message. Veuillez réessayer.",
+      "footer_rights": "Tous droits réservés.",
+      "skills_title": "Compétences et Expertise",
+      "edu_title": "Éducation",
+      "testimonials_title": "Témoignages",
+      "testimonials_subtitle": "Ce que les gens disent de mon travail"
+    }
+  },
+  "hero": {
+    "profileImage": "/asset/images/profile.png",
+    "cvUrl": "/asset/pdf/cv.pdf",
+    "socialLinks": {
+      "github": "https://github.com/OussamaBentaouil70",
+      "linkedin": "https://www.linkedin.com/in/oussama-bentaouil/",
+      "email": "mailto:oussama.bentaouil.ob@gmail.com"
+    }
+  },
+  "about": {
+    "paragraphs": {
+      "en": [
+        "As a full stack web developer, I have built intuitive applications across various industries, combining expertise in user interface with robust backend functionality.",
+        "Currently at Schommer Media, I develop and maintain a variety of projects for internal use and a diverse clientele in the German market. I am eager to join a talented team where I can contribute my expertise and collaborate on innovative projects."
+      ],
+      "fr": [
+        "En tant que développeur web full stack, j'ai construit des applications intuitives dans divers secteurs, combinant expertise en interface utilisateur et fonctionnalités backend robustes.",
+        "Actuellement chez Schommer Media, je développe et maintiens une variété de projets pour un usage interne et une clientèle diversifiée sur le marché allemand. Je suis impatient de rejoindre une équipe talentueuse où je pourrai apporter mon expertise et collaborer sur des projets innovants."
+      ]
+    },
+    "location": "Marrakech, Morocco"
+  },
+  "footer": {
+    "fullName": "Oussama Bentaouil",
+    "phone": {
+      "href": "tel:+212618115141",
+      "title": "+212 6 18 11 51 41",
+      "label": "+212 6 18 11 51 41"
+    }
+  },
+  "experiences": [
+    {
+      "company": "Schommer Media",
+      "role": "Full Stack Web Developer",
+      "period": "09/2024 – Present",
+      "location": "Marrakech, Morocco",
+      "desc": {
+        "en": "Developed a Progressive Web App (PWA) to optimize property management and maintenance. Designed a centralized ticket management system enabling tenants to report facility issues. Worked on several client projects using TYPO3 and React.",
+        "fr": "Développement d'une Progressive Web App (PWA) pour optimiser la gestion et la maintenance immobilière. Conception d'un système centralisé de gestion des tickets. Travail sur plusieurs projets clients utilisant TYPO3 et React."
+      },
+      "tech": ["ReactJs", "Ionic", "Laravel", "MySQL", "TYPO3"]
+    },
+    {
+      "company": "CloudLink",
+      "role": "Full Stack Web Developer Intern",
+      "period": "03/2024 – 07/2024",
+      "location": "Marrakech, Morocco",
+      "desc": {
+        "en": "Developed a SaaS application assisting IBM ODM users in transforming workspace rules into machine learning models.",
+        "fr": "Développement d'une application SaaS aidant les utilisateurs d'IBM ODM à transformer les règles d'espace de travail en modèles d'apprentissage automatique."
+      },
+      "tech": ["ReactJs", "NodeJs", "Machine Learning", "Docker", "MongoDB"]
+    },
+   
+    {
+      "company": "ONDA",
+      "role": "Software Developer Intern",
+      "period": "10/2021 – 12/2021",
+      "location": "Marrakech, Morocco",
+      "desc": {
+        "en": "Designed and developed a web application for managing employee files.",
+        "fr": "Conception et développement d'une application web pour la gestion des dossiers des employés."
+      },
+      "tech": ["Spring Boot", "Angular"]
+    }, 
+
+     {
+      "company": "ZSMARTSERVICES",
+      "role": "Software Developer Intern",
+      "period": "04/2021 – 07/2021",
+      "location": "Marrakech, Morocco",
+      "desc": {
+        "en": "Designed an e-learning platform with role-based access for teachers and students. Integrated a calendar for tracking courses and semesters, and implemented a service for teachers to create custom forms.",
+        "fr": "Conception d'une plateforme e-learning avec un accès basé sur les rôles pour les enseignants et les étudiants. Intégration d'un calendrier pour le suivi des cours et des semestres, et mise en place d'un service permettant aux enseignants de créer des formulaires personnalisés."
+      },
+      "tech": ["Spring Boot", "Angular"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Web Application",
+      "url": "#",
+      "image": "https://picsum.photos/seed/ecommerce/800/600",
+      "tags": ["Node.js", "React", "Full Stack"]
+    },
+    {
+      "title": "Android Mobile Application",
+      "url": "#",
+      "image": "https://picsum.photos/seed/mobile/800/600",
+      "tags": ["Android", "Google Maps", "Java"]
+    },
+    {
+      "title": "Node.js npm Package",
+      "url": "https://www.npmjs.com/",
+      "image": "https://picsum.photos/seed/npm/800/600",
+      "tags": ["Node.js", "NPM", "Crypto"]
+    },
+    {
+      "title": "Up To Marrakech",
+      "url": "https://uptomarrakech.com/",
+      "image": "/asset/images/uptomarrakech1.png",
+      "tags": ["WordPress", "Freelance"]
+    },
+    {
+      "title": "Immigrate Brazil",
+      "url": "https://immigratebrazil.com/",
+      "image": "/asset/images/imagrate_brazil.png",
+      "tags": ["WordPress", "Freelance"]
+    },
+    {
+      "title": "Hair Medico",
+      "url": "https://hairmedico-consultation.com/",
+      "image": "/asset/images/hairmedico.png",
+      "tags":  ["WordPress", "Freelance"]
+    },
+    {
+      "title": "Dental Medico",
+      "url": "https://dentalmedico.com/",
+      "image": "/asset/images/dentalmedico.png",
+      "tags": ["WordPress", "Elementor"]
+    },
+    {
+      "title": "Golden Hill Spa",
+      "url": "https://goldenhill-spa.com/",
+      "image": "/asset/images/goldenhillspa.png",
+      "tags":["WordPress", "Elementor"]
+    },
+    {
+      "title": "Clic To Convert",
+      "url": "https://clictoconvert.com/",
+      "image": "/asset/images/clictoconvert.png",
+      "tags": ["React", "Next.js"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Java", "PHP", "Python", "JavaScript", "TypeScript"]
+    },
+    {
+      "category": "Frameworks",
+      "items": ["React", "Next.js", "Angular", "Laravel", "Spring Boot", "Node.js", "Express.js"]
+    },
+    {
+      "category": "CMS",
+      "items": ["WordPress", "TYPO3"]
+    },
+    {
+      "category": "Databases",
+      "items": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"]
+    },
+    {
+      "category": "DevOps",
+      "items": ["Docker", "Git", "Jira"]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Michael Schommer",
+      "role": "CEO, Schommer Media",
+      "image": "https://picsum.photos/seed/schommer/100/100",
+      "content": {
+        "en": "Oussama is a highly skilled developer who consistently delivers high-quality work. His expertise in React and TYPO3 has been invaluable to our client projects.",
+        "fr": "Oussama est un développeur hautement qualifié qui fournit constamment un travail de haute qualité. Son expertise en React et TYPO3 a été inestimable pour nos projets clients."
+      }
+    },
+    {
+      "name": "Sarah",
+      "role": "Project Manager, CloudLink",
+      "image": "/asset/images/cloudlink.png",
+      "content": {
+        "en": "During his internship, Oussama showed great initiative and technical prowess in building our SaaS application. He is a fast learner and a great team player.",
+        "fr": "Pendant son stage, Oussama a fait preuve d'une grande initiative et de prouesses techniques dans la construction de notre application SaaS. Il apprend vite et a un excellent esprit d'équipe."
+      }
+    },
+    {
+      "name": "Mustapha",
+      "role": "Owner, Up To Marrakech",
+      "image": "/asset/images/uptomarrakech1.png",
+      "content": {
+        "en": "Working with Oussama on our tourism platform was a breeze. He understood our needs perfectly and delivered a fast, beautiful website.",
+        "fr": "Travailler avec Oussama sur notre plateforme touristique a été un plaisir. Il a parfaitement compris nos besoins et a livré un site web rapide et magnifique."
+      }
+    },
+    {
+      "name": "Dr. Selim Kaya",
+      "role": "Director, Istanbul Dent Spa",
+      "image": "/asset/images/dentalmedico.png",
+      "content": {
+        "en": "Oussama built a modern, high-converting website for our clinic. His attention to detail and technical skills are top-notch.",
+        "fr": "Oussama a construit un site web moderne et à fort taux de conversion pour notre clinique. Son souci du détail et ses compétences techniques sont de premier ordre."
+      }
+    }
+  ]
+}

@@ -9,6 +9,16 @@ import Footer from '@/components/footer';
 import BackgroundBeams from '@/components/background-beams';
 
 export default function Page() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="min-h-screen bg-background text-foreground" aria-hidden />;
+  }
+
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground relative">

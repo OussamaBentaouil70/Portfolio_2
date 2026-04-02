@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { ExternalLink, Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import siteContent from '@/data/site-content.json';
 
 export default function PortfolioContent() {
   const { t, language } = useLanguage();
@@ -15,151 +16,7 @@ export default function PortfolioContent() {
     setMounted(true);
   }, []);
 
-  const experiences = [
-    {
-      company: 'Schommer Media',
-      role: 'Full Stack Web Developer',
-      period: '09/2024 – Present',
-      location: 'Marrakech, Morocco',
-      desc: {
-        en: 'Developed a Progressive Web App (PWA) to optimize property management and maintenance. Designed a centralized ticket management system enabling tenants to report facility issues. Worked on several client projects using TYPO3 and React.',
-        fr: 'Développement d\'une Progressive Web App (PWA) pour optimiser la gestion et la maintenance immobilière. Conception d\'un système centralisé de gestion des tickets. Travail sur plusieurs projets clients utilisant TYPO3 et React.'
-      },
-      tech: 'ReactJs, Ionic, Laravel, MySQL, TYPO3'
-    },
-    {
-      company: 'CloudLink',
-      role: 'Full Stack Web Developer Intern',
-      period: '03/2024 – 07/2024',
-      location: 'Marrakech, Morocco',
-      desc: {
-        en: 'Developed a SaaS application assisting IBM ODM users in transforming workspace rules into machine learning models.',
-        fr: 'Développement d\'une application SaaS aidant les utilisateurs d\'IBM ODM à transformer les règles d\'espace de travail en modèles d\'apprentissage automatique.'
-      },
-      tech: 'ReactJs, NodeJs, Machine Learning, Docker, MongoDB'
-    },
-    {
-      company: 'ONDA',
-      role: 'Software Developer Intern',
-      period: '10/2021 – 12/2021',
-      location: 'Marrakech, Morocco',
-      desc: {
-        en: 'Designed and developed a web application for managing employee files.',
-        fr: 'Conception et développement d\'une application web pour la gestion des dossiers des employés.'
-      },
-      tech: 'Spring Boot, Angular'
-    }
-  ];
-
-  const projects = [
-    {
-      title: 'E-Commerce Web Application',
-      url: '#',
-      image: 'https://picsum.photos/seed/ecommerce/800/600',
-      tags: ['Node.js', 'React', 'Full Stack']
-    },
-    {
-      title: 'Android Mobile Application',
-      url: '#',
-      image: 'https://picsum.photos/seed/mobile/800/600',
-      tags: ['Android', 'Google Maps', 'Java']
-    },
-    {
-      title: 'Node.js npm Package',
-      url: 'https://www.npmjs.com/',
-      image: 'https://picsum.photos/seed/npm/800/600',
-      tags: ['Node.js', 'NPM', 'Crypto']
-    },
-    {
-      title: 'Up To Marrakech',
-      url: 'https://uptomarrakech.com/',
-      image: 'https://picsum.photos/seed/marrakech/800/600',
-      tags: ['WordPress', 'Freelance']
-    },
-    {
-      title: 'Immigrate Brazil',
-      url: 'https://immigratebrazil.com/',
-      image: 'https://picsum.photos/seed/brazil/800/600',
-      tags: ['WordPress', 'Freelance']
-    },
-    {
-      title: 'Hair Medico',
-      url: 'https://hairmedico-consultation.com/',
-      image: 'https://picsum.photos/seed/hair/800/600',
-      tags: ['React', 'Next.js']
-    },
-    {
-      title: 'Istanbul Dent Spa',
-      url: 'https://istanbuldentspa.com/',
-      image: 'https://picsum.photos/seed/dent/800/600',
-      tags: ['React', 'Next.js']
-    },
-    {
-      title: 'Dental Medico',
-      url: 'https://dentalmedico.com/',
-      image: 'https://picsum.photos/seed/dental/800/600',
-      tags: ['React', 'Next.js']
-    },
-    {
-      title: 'Golden Hill Spa',
-      url: 'https://goldenhill-spa.com/',
-      image: 'https://picsum.photos/seed/spa/800/600',
-      tags: ['WordPress']
-    },
-    {
-      title: 'Clic To Convert',
-      url: 'https://clictoconvert.com/',
-      image: 'https://picsum.photos/seed/convert/800/600',
-      tags: ['React', 'Next.js']
-    }
-  ];
-
-  const skills = [
-    { category: 'Languages', items: ['Java', 'PHP', 'Python', 'JavaScript', 'TypeScript'] },
-    { category: 'Frameworks', items: ['React', 'Next.js', 'Angular', 'Laravel', 'Spring Boot', 'Node.js', 'Express.js'] },
-    { category: 'CMS', items: ['WordPress', 'TYPO3'] },
-    { category: 'Databases', items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'] },
-    { category: 'DevOps', items: ['Docker', 'Git', 'Jira'] }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Michael Schommer',
-      role: 'CEO, Schommer Media',
-      image: 'https://picsum.photos/seed/schommer/100/100',
-      content: {
-        en: 'Oussama is a highly skilled developer who consistently delivers high-quality work. His expertise in React and TYPO3 has been invaluable to our client projects.',
-        fr: 'Oussama est un développeur hautement qualifié qui fournit constamment un travail de haute qualité. Son expertise en React et TYPO3 a été inestimable pour nos projets clients.'
-      }
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'Project Manager, CloudLink',
-      image: 'https://picsum.photos/seed/cloudlink/100/100',
-      content: {
-        en: 'During his internship, Oussama showed great initiative and technical prowess in building our SaaS application. He is a fast learner and a great team player.',
-        fr: 'Pendant son stage, Oussama a fait preuve d\'une grande initiative et de prouesses techniques dans la construction de notre application SaaS. Il apprend vite et a un excellent esprit d\'équipe.'
-      }
-    },
-    {
-      name: 'Ahmed Al-Marrakchi',
-      role: 'Owner, Up To Marrakech',
-      image: 'https://picsum.photos/seed/marrakech_client/100/100',
-      content: {
-        en: 'Working with Oussama on our tourism platform was a breeze. He understood our needs perfectly and delivered a fast, beautiful website.',
-        fr: 'Travailler avec Oussama sur notre plateforme touristique a été un plaisir. Il a parfaitement compris nos besoins et a livré un site web rapide et magnifique.'
-      }
-    },
-    {
-      name: 'Dr. Selim Kaya',
-      role: 'Director, Istanbul Dent Spa',
-      image: 'https://picsum.photos/seed/dent_client/100/100',
-      content: {
-        en: 'Oussama built a modern, high-converting website for our clinic. His attention to detail and technical skills are top-notch.',
-        fr: 'Oussama a construit un site web moderne et à fort taux de conversion pour notre clinique. Son souci du détail et ses compétences techniques sont de premier ordre.'
-      }
-    }
-  ];
+  const { hero, about, experiences, projects, skills, testimonials } = siteContent;
 
   return (
     <main className="pt-20">
@@ -189,7 +46,7 @@ export default function PortfolioContent() {
                 className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-background shadow-[0_0_50px_rgba(var(--primary-rgb),0.3)] relative z-10"
               >
                 <Image 
-                  src="https://picsum.photos/seed/oussama-pro/400/400" 
+                  src={hero.profileImage}
                   alt="Oussama Bentaouil" 
                   fill 
                   className="object-cover"
@@ -221,7 +78,7 @@ export default function PortfolioContent() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/cv.pdf" // Placeholder for CV
+              href={hero.cvUrl}
               target="_blank"
               className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold flex items-center gap-2 shadow-lg shadow-primary/20"
             >
@@ -229,13 +86,13 @@ export default function PortfolioContent() {
               {t('hero_cv_button')}
             </motion.a>
             <div className="flex items-center gap-4 ml-4">
-              <a href="https://github.com/OussamaBentaouil70" target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.github} target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/oussama-bentaouil/" target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.linkedin} target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:oussama.bentaouil.ob@gmail.com" className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.email} className="p-3 hover:bg-accent rounded-full transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -253,19 +110,12 @@ export default function PortfolioContent() {
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">{t('about_title')}</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                {language === 'en' 
-                  ? "As a full stack web developer, I have built intuitive applications across various industries, combining expertise in user interface with robust backend functionality."
-                  : "En tant que développeur web full stack, j'ai construit des applications intuitives dans divers secteurs, combinant expertise en interface utilisateur et fonctionnalités backend robustes."}
-              </p>
-              <p>
-                {language === 'en'
-                  ? "Currently at Schommer Media, I develop and maintain a variety of projects for internal use and a diverse clientele in the German market. I am eager to join a talented team where I can contribute my expertise and collaborate on innovative projects."
-                  : "Actuellement chez Schommer Media, je développe et maintiens une variété de projets pour un usage interne et une clientèle diversifiée sur le marché allemand. Je suis impatient de rejoindre une équipe talentueuse où je pourrai apporter mon expertise et collaborer sur des projets innovants."}
-              </p>
+              {about.paragraphs[language].map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
               <div className="flex items-center gap-2 text-primary font-medium">
                 <MapPin className="w-5 h-5" />
-                Marrakech, Morocco
+                {about.location}
               </div>
             </div>
           </motion.div>
@@ -318,9 +168,9 @@ export default function PortfolioContent() {
                       {language === 'en' ? exp.desc.en : exp.desc.fr}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {exp.tech.split(', ').map(t => (
-                        <span key={t} className="text-xs px-2 py-1 bg-background border rounded-md">
-                          {t}
+                      {exp.tech.map((tech) => (
+                        <span key={tech} className="text-xs px-2 py-1 bg-background border rounded-md">
+                          {tech}
                         </span>
                       ))}
                     </div>
