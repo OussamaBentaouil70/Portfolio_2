@@ -13,6 +13,7 @@
       "about_title": "About Me",
       "experience_title": "Experience",
       "projects_title": "Featured Projects",
+      "languages_title": "Languages",
       "contact_title": "Get In Touch",
       "contact_name": "Name",
       "contact_email": "Email",
@@ -40,6 +41,7 @@
       "about_title": "À propos de moi",
       "experience_title": "Expérience",
       "projects_title": "Projets en vedette",
+      "languages_title": "Langues",
       "contact_title": "Contactez-moi",
       "contact_name": "Nom",
       "contact_email": "Email",
@@ -81,6 +83,23 @@
     },
     "location": "Marrakech, Morocco"
   },
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "Native",
+      "proficiency": 100
+    },
+    {
+      "name": "French",
+      "level": "Fluent",
+      "proficiency": 88
+    },
+    {
+      "name": "English",
+      "level": "Fluent",
+      "proficiency": 86
+    }
+  ],
   "footer": {
     "fullName": "Oussama Bentaouil",
     "phone": {
@@ -191,6 +210,12 @@
       "url": "https://clictoconvert.com/",
       "image": "/asset/images/clictoconvert.png",
       "tags": ["React", "Next.js"]
+    },
+    {
+      "title": "Wedding Planner Morocco",
+      "url": "https://weddingsplannermorocco.com",
+      "image": "/asset/images/wedding.png",
+      "tags": ["Next.js", "PHPMailer", "Firebase Firestore"]
     }
   ],
   "skills": [

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/hooks/use-language';
 import { motion } from 'motion/react';
-import { ExternalLink, Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
+import { ExternalLink, Github, Languages as LanguagesIcon, Linkedin, Mail, MapPin, Download } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import siteContent from '@/data/site-content.json';
@@ -16,7 +16,7 @@ export default function PortfolioContent() {
     setMounted(true);
   }, []);
 
-  const { hero, about, experiences, projects, skills, testimonials } = siteContent;
+  const { hero, about, languages, experiences, projects, skills, testimonials } = siteContent;
 
   return (
     <main className="pt-20">
@@ -162,6 +162,53 @@ export default function PortfolioContent() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Languages Section */}
+      <section id="languages" className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 flex items-center gap-3"
+          >
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border bg-accent/30 text-primary shadow-sm">
+              <LanguagesIcon className="h-6 w-6" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-display font-bold">{t('languages_title')}</h2>
+          </motion.div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {languages.map((languageItem, idx) => (
+              <motion.div
+                key={languageItem.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="rounded-3xl border bg-background/80 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur-sm"
+              >
+                <div className="mb-5">
+                  <h3 className="text-2xl font-display font-bold text-foreground">{languageItem.name}</h3>
+                  <p className="mt-2 text-base text-primary font-medium">{languageItem.level}</p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="h-2 overflow-hidden rounded-full bg-accent/70">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${languageItem.proficiency}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 + idx * 0.08 }}
+                      className="h-full rounded-full bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
