@@ -16,6 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Oussama Bentaouil | Full Stack Developer',
   description: 'Portfolio of Oussama Bentaouil, a Full Stack Web Developer based in Marrakech, Morocco.',
+  icons: {
+    icon: '/asset/images/logo.png',
+    shortcut: '/asset/images/logo.png',
+    apple: '/asset/images/logo.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

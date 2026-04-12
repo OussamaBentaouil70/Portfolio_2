@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/hooks/use-language';
 import { useTheme } from 'next-themes';
-import { Moon, Sun, Languages, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/lib/utils';
 
@@ -57,14 +57,19 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex items-center gap-4 border-l pl-8">
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
-              className="p-2 hover:bg-accent rounded-full transition-colors"
-              title="Toggle Language"
-            >
-              <Languages className="w-5 h-5" />
-              <span className="sr-only">Toggle Language</span>
-            </button>
+            <div>
+              <label htmlFor="language-select-desktop" className="sr-only">Select Language</label>
+              <select
+                id="language-select-desktop"
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as 'en' | 'fr')}
+                className="h-9 bg-transparent px-1 text-sm font-semibold text-foreground border-0 shadow-none focus:outline-none focus:ring-0 [color-scheme:light] dark:[color-scheme:dark]"
+                aria-label="Select Language"
+              >
+                <option value="en" className="bg-background text-foreground">EN</option>
+                <option value="fr" className="bg-background text-foreground">FR</option>
+              </select>
+            </div>
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 hover:bg-accent rounded-full transition-colors"
@@ -114,16 +119,22 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex items-center justify-between pt-4 border-t">
-                <button
-                  onClick={() => {
-                    setLanguage(language === 'en' ? 'fr' : 'en');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="flex items-center gap-2 text-sm font-medium"
-                >
-                  <Languages className="w-5 h-5" />
-                  {language === 'en' ? 'Français' : 'English'}
-                </button>
+                <div className="w-full">
+                  <label htmlFor="language-select-mobile" className="sr-only">Select Language</label>
+                  <select
+                    id="language-select-mobile"
+                    value={language}
+                    onChange={(e) => {
+                      setLanguage(e.target.value as 'en' | 'fr');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="h-9 w-full bg-transparent px-1 text-sm font-semibold text-foreground border-0 shadow-none focus:outline-none focus:ring-0 [color-scheme:light] dark:[color-scheme:dark]"
+                    aria-label="Select Language"
+                  >
+                    <option value="en" className="bg-background text-foreground">EN</option>
+                    <option value="fr" className="bg-background text-foreground">FR</option>
+                  </select>
+                </div>
               </div>
             </div>
           </motion.div>

@@ -63,7 +63,7 @@
       "url": "https://videos.pexels.com/video-files/32399073/13820342_2560_1440_30fps.mp4",
       "overlayOpacity": 0.68
     },
-    "cvUrl": "/asset/pdf/cv.pdf",
+    "cvUrl": "/asset/pdf/Oussama_CV.pdf",
     "socialLinks": {
       "github": "https://github.com/OussamaBentaouil70",
       "linkedin": "https://www.linkedin.com/in/oussama-bentaouil/",
@@ -115,10 +115,16 @@
       "period": "09/2024 – Present",
       "location": "Marrakech, Morocco",
       "desc": {
-        "en": "Developed a Progressive Web App (PWA) to optimize property management and maintenance. Designed a centralized ticket management system enabling tenants to report facility issues. Worked on several client projects using TYPO3 and React.",
-        "fr": "Développement d'une Progressive Web App (PWA) pour optimiser la gestion et la maintenance immobilière. Conception d'un système centralisé de gestion des tickets. Travail sur plusieurs projets clients utilisant TYPO3 et React."
+        "en": "Developed a property management PWA with a real-time ticket system for facility maintenance. Built and architected scalable TYPO3 and React solutions for the German market, managing full-stack development from PHP backend logic to frontend templating within agile teams.",
+        "fr": "Développement d'une PWA de gestion immobilière avec système de ticketing en temps réel. Conception d'architectures évolutives avec TYPO3 et React pour le marché allemand, incluant le développement backend PHP et l'intégration frontend."
       },
-      "tech": ["ReactJs", "Ionic", "Laravel", "MySQL", "TYPO3"]
+      "tech": [
+        "ReactJs",
+        "Ionic",
+        "Laravel",
+        "MySQL",
+        "TYPO3"
+      ]
     },
     {
       "company": "CloudLink",
@@ -129,9 +135,14 @@
         "en": "Developed a SaaS application assisting IBM ODM users in transforming workspace rules into machine learning models.",
         "fr": "Développement d'une application SaaS aidant les utilisateurs d'IBM ODM à transformer les règles d'espace de travail en modèles d'apprentissage automatique."
       },
-      "tech": ["ReactJs", "NodeJs", "Machine Learning", "Docker", "MongoDB"]
+      "tech": [
+        "ReactJs",
+        "NodeJs",
+        "Machine Learning",
+        "Docker",
+        "MongoDB"
+      ]
     },
-   
     {
       "company": "ONDA",
       "role": "Software Developer Intern",
@@ -141,10 +152,12 @@
         "en": "Designed and developed a web application for managing employee files.",
         "fr": "Conception et développement d'une application web pour la gestion des dossiers des employés."
       },
-      "tech": ["Spring Boot", "Angular"]
-    }, 
-
-     {
+      "tech": [
+        "Spring Boot",
+        "Angular"
+      ]
+    },
+    {
       "company": "ZSMARTSERVICES",
       "role": "Software Developer Intern",
       "period": "04/2021 – 07/2021",
@@ -153,98 +166,161 @@
         "en": "Designed an e-learning platform with role-based access for teachers and students. Integrated a calendar for tracking courses and semesters, and implemented a service for teachers to create custom forms.",
         "fr": "Conception d'une plateforme e-learning avec un accès basé sur les rôles pour les enseignants et les étudiants. Intégration d'un calendrier pour le suivi des cours et des semestres, et mise en place d'un service permettant aux enseignants de créer des formulaires personnalisés."
       },
-      "tech": ["Spring Boot", "Angular"]
+      "tech": [
+        "Spring Boot",
+        "Angular"
+      ]
     }
   ],
   "projects": [
     {
       "title": "E-Commerce Web Application",
-      "url": "#",
+      "url": "https://github.com/OussamaBentaouil70/mern-estate",
       "image": "https://picsum.photos/seed/ecommerce/800/600",
-      "tags": ["Node.js", "React", "Full Stack"]
+      "tags": [
+        "Node.js",
+        "React",
+        "Full Stack"
+      ]
     },
     {
       "title": "Android Mobile Application",
-      "url": "#",
+      "url": "https://github.com/OussamaBentaouil70/CloudBankApp",
       "image": "https://picsum.photos/seed/mobile/800/600",
-      "tags": ["Android", "Google Maps", "Java"]
+      "tags": [
+        "Android",
+        "Google Maps",
+        "Java"
+      ]
     },
     {
       "title": "Node.js npm Package",
-      "url": "https://www.npmjs.com/",
+      "url": "https://github.com/OussamaBentaouil70/npm-package",
       "image": "https://picsum.photos/seed/npm/800/600",
-      "tags": ["Node.js", "NPM", "Crypto"]
+      "tags": [
+        "Node.js",
+        "NPM",
+        "Crypto"
+      ]
     },
     {
       "title": "Up To Marrakech",
       "url": "https://uptomarrakech.com/",
       "image": "/asset/images/uptomarrakech1.png",
-      "tags": ["WordPress", "Freelance"]
+      "tags": [
+        "WordPress",
+        "Freelance"
+      ]
     },
     {
       "title": "Immigrate Brazil",
       "url": "https://immigratebrazil.com/",
       "image": "/asset/images/imagrate_brazil.png",
-      "tags": ["WordPress", "Freelance"]
+      "tags": [
+        "WordPress",
+        "Freelance"
+      ]
     },
     {
       "title": "Hair Medico",
       "url": "https://hairmedico-consultation.com/",
       "image": "/asset/images/hairmedico.png",
-      "tags":  ["WordPress", "Freelance"]
+      "tags": [
+        "WordPress",
+        "Freelance"
+      ]
     },
     {
       "title": "Dental Medico",
       "url": "https://dentalmedico.com/",
       "image": "/asset/images/dentalmedico.png",
-      "tags": ["WordPress", "Elementor"]
+      "tags": [
+        "WordPress",
+        "Elementor"
+      ]
     },
     {
       "title": "Golden Hill Spa",
       "url": "https://goldenhill-spa.com/",
       "image": "/asset/images/goldenhillspa.png",
-      "tags":["WordPress", "Elementor"]
+      "tags": [
+        "WordPress",
+        "Elementor"
+      ]
     },
     {
       "title": "Clic To Convert",
       "url": "https://clictoconvert.com/",
       "image": "/asset/images/clictoconvert.png",
-      "tags": ["React", "Next.js"]
+      "tags": [
+        "React",
+        "Next.js"
+      ]
     },
     {
       "title": "Wedding Planner Morocco",
       "url": "https://weddingsplannermorocco.com",
       "image": "/asset/images/wedding.png",
-      "tags": ["Next.js", "PHPMailer", "Firebase Firestore"]
+      "tags": [
+        "Next.js",
+        "PHPMailer",
+        "Firebase Firestore"
+      ]
     }
   ],
   "skills": [
     {
       "category": "Languages",
-      "items": ["Java", "PHP", "Python", "JavaScript", "TypeScript"]
+      "items": [
+        "Java",
+        "PHP",
+        "Python",
+        "JavaScript",
+        "TypeScript"
+      ]
     },
     {
       "category": "Frameworks",
-      "items": ["React", "Next.js", "Angular", "Laravel", "Spring Boot", "Node.js", "Express.js"]
+      "items": [
+        "React",
+        "Next.js",
+        "Angular",
+        "Laravel",
+        "Spring Boot",
+        "Node.js",
+        "Express.js"
+      ]
     },
     {
       "category": "CMS",
-      "items": ["WordPress", "TYPO3"]
+      "items": [
+        "WordPress",
+        "TYPO3"
+      ]
     },
     {
       "category": "Databases",
-      "items": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"]
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite"
+      ]
     },
     {
       "category": "DevOps",
-      "items": ["Docker", "Git", "Jira"]
+      "items": [
+        "Docker",
+        "Git",
+        "Jira"
+      ]
     }
   ],
   "testimonials": [
     {
-      "name": "Michael Schommer",
+      "name": "Tim Schommer",
       "role": "CEO, Schommer Media",
-      "image": "https://picsum.photos/seed/schommer/100/100",
+      "image": "/asset/images/schommer_media_gmbh_logo.jpg",
       "content": {
         "en": "Oussama is a highly skilled developer who consistently delivers high-quality work. His expertise in React and TYPO3 has been invaluable to our client projects.",
         "fr": "Oussama est un développeur hautement qualifié qui fournit constamment un travail de haute qualité. Son expertise en React et TYPO3 a été inestimable pour nos projets clients."

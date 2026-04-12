@@ -78,7 +78,7 @@ export default function PortfolioContent() {
               </motion.div>
           </div>
           
-          <h1 className="text-4xl md:text-7xl font-display font-bold mb-6 tracking-tighter">
+          <h1 className="text-4xl md:text-7xl font-display font-bold mb-6 tracking-tighter text-white">
             {mounted ? t('hero_title').split('').map((char, i) => (
               <motion.span
                 key={i}
@@ -109,13 +109,13 @@ export default function PortfolioContent() {
               {t('hero_cv_button')}
             </motion.a>
             <div className="flex items-center gap-4 ml-4">
-              <a href={hero.socialLinks.github} target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.github} target="_blank" className="p-3 text-white hover:text-white hover:bg-white/15 rounded-full transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href={hero.socialLinks.linkedin} target="_blank" className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.linkedin} target="_blank" className="p-3 text-white hover:text-white hover:bg-white/15 rounded-full transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href={hero.socialLinks.email} className="p-3 hover:bg-accent rounded-full transition-colors">
+              <a href={hero.socialLinks.email} className="p-3 text-white hover:text-white hover:bg-white/15 rounded-full transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
