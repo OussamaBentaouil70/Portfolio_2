@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/hooks/use-language';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { ExternalLink, Github, Languages as LanguagesIcon, Linkedin, Mail, MapPin, Download } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -11,28 +11,41 @@ import siteContent from '@/data/site-content.json';
 export default function PortfolioContent() {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = React.useState(false);
+  const [isDesktop, setIsDesktop] = React.useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   React.useEffect(() => {
     setMounted(true);
+
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const updateViewportMode = () => setIsDesktop(mediaQuery.matches);
+
+    updateViewportMode();
+    mediaQuery.addEventListener('change', updateViewportMode);
+
+    return () => mediaQuery.removeEventListener('change', updateViewportMode);
   }, []);
 
   const { hero, about, languages, experiences, projects, skills, testimonials } = siteContent;
+  const shouldRenderHeroVideo = mounted && isDesktop && !prefersReducedMotion;
 
   return (
     <main className="pt-20">
       {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 relative overflow-hidden isolate">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <video
-            className="h-full w-full object-cover"
-            src={hero.backgroundVideo.url}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          />
+          {shouldRenderHeroVideo && (
+            <video
+              className="h-full w-full object-cover"
+              src={hero.backgroundVideo.url}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              aria-hidden="true"
+            />
+          )}
           <div
             className="absolute inset-0 bg-slate-950"
             style={{ opacity: hero.backgroundVideo.overlayOpacity }}

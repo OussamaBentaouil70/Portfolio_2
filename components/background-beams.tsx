@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 export default function BackgroundBeams() {
   const [mounted, setMounted] = React.useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   React.useEffect(() => {
     setMounted(true);
@@ -16,46 +17,52 @@ export default function BackgroundBeams() {
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       <div className="absolute inset-0 bg-background" />
       <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-          x: [0, 100, 0],
-          y: [0, 50, 0],
+        animate={
+          prefersReducedMotion
+            ? { opacity: 0.2 }
+            : {
+                scale: [1, 1.08, 1],
+                opacity: [0.22, 0.34, 0.22],
+              }
+        }
+        transition={{
+          duration: 16,
+          repeat: prefersReducedMotion ? 0 : Infinity,
+          ease: 'linear',
         }}
+        className="absolute -top-[8%] -left-[8%] h-[34%] w-[34%] rounded-full bg-primary/18 blur-[84px] will-change-transform"
+      />
+      <motion.div
+        animate={
+          prefersReducedMotion
+            ? { opacity: 0.16 }
+            : {
+                scale: [1, 1.12, 1],
+                opacity: [0.14, 0.26, 0.14],
+              }
+        }
         transition={{
           duration: 20,
-          repeat: Infinity,
-          ease: "linear"
+          repeat: prefersReducedMotion ? 0 : Infinity,
+          ease: 'linear',
         }}
-        className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]"
+        className="absolute top-[18%] -right-[6%] h-[42%] w-[42%] rounded-full bg-blue-500/10 blur-[100px] will-change-transform"
       />
       <motion.div
-        animate={{
-          scale: [1, 1.5, 1],
-          opacity: [0.2, 0.4, 0.2],
-          x: [0, -150, 0],
-          y: [0, -100, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="absolute top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-500/10 blur-[150px]"
-      />
-      <motion.div
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.1, 0.3, 0.1],
-          x: [0, 50, 0],
-          y: [0, 150, 0],
-        }}
+        animate={
+          prefersReducedMotion
+            ? { opacity: 0.1 }
+            : {
+                scale: [1, 1.1, 1],
+                opacity: [0.08, 0.16, 0.08],
+              }
+        }
         transition={{
           duration: 18,
-          repeat: Infinity,
-          ease: "linear"
+          repeat: prefersReducedMotion ? 0 : Infinity,
+          ease: 'linear',
         }}
-        className="absolute -bottom-[10%] left-[20%] w-[60%] h-[60%] rounded-full bg-purple-500/10 blur-[180px]"
+        className="absolute -bottom-[8%] left-[16%] hidden h-[48%] w-[48%] rounded-full bg-indigo-500/10 blur-[110px] will-change-transform md:block"
       />
       
       {/* Grid Pattern */}
